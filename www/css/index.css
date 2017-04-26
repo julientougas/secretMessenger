@@ -1,0 +1,20 @@
+#from,
+#decodedMsg {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+#listModalContent {
+    margin-top: 5px;
+}
+
+.card {
+    text-align: center;
+}
+.card p {
+    text-align: left;
+}
+canvas {
+    display: inline;
+}
+

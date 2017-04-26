@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://griffis.edumedia.ca data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' https://griffis.edumedia.ca data: content: file: assets-library: ;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/ratchet.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"> </head>
+
+<body>
+    <header class="bar bar-nav">
+        <h1 class="title">Messenger</h1> </header>
+    <div id="loginDiv" class="content">
+        <form class="content-padded">
+            <input id="userForm" type="text" placeholder="Username">
+            <input id="emailForm" type="text" placeholder="Email">
+            <button id="loginBtn" class="btn btn-primary btn-block">Login</button>
+            <button id="registerBtn" class="btn btn-positive btn-block">Register</button>
+        </form>
+    </div>
+    <div id="listModal" class="modal">
+        <header class="bar bar-nav">
+            <a id="refresh" class="icon icon-refresh pull-left"></a>
+            <a id="sendMsg" class="icon icon-compose pull-right"></a>
+            <h1 class="title">Messenger</h1> </header>
+        <div id="listModalContent" class="content">
+            <div class="card">
+                <ul id="msgList" class="table-view">
+                    <li class="table-view-cell media">
+                            <p>No messages :(</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="picModal" class="modal">
+        <header class="bar bar-nav"> <a id="closePic" class="icon icon-left-nav pull-left"></a>
+            <h1 class="title">Messenger</h1> </header>
+        <div class="content">
+            <div class="card">
+                <form class="content-padded">
+                    <button id="takePicBtn" class="btn btn-positive btn-block">Take Picture</button> <img class="media-object" src="">
+                    <canvas id="picCanvas"></canvas>
+                    <select id="select"> </select>
+                    <input id="msgForm" type="text" placeholder="Message"> 
+                    <button id="sendBtn" class="btn btn-primary btn-block">Send</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <div id="delModal" class="modal">
+        <header class="bar bar-nav"> <a id="closeDel" class="icon icon-left-nav pull-left"></a>
+            <a id="openPic" class="icon icon-compose pull-right"></a>
+            <h1 class="title">Messenger</h1> </header>
+        <div class="content">
+            <div id="delContent" class="content-padded">
+                <div class="card">
+                    <p id="from">From:</p>
+                    <canvas id="delCanvas"></canvas>
+                    <p id="decodedMsg">Message:</p>
+                </div>
+                <button id="delBtn" class="btn btn-negative btn-block">Delete Message</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/ratchet.min.js"></script>
+    <script type="text/javascript" src="js/bits-1.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
